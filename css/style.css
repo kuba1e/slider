@@ -42,7 +42,6 @@ textarea {
   height: 60vh;
   margin: 0 auto;
   position: relative;
-  background-color: aquamarine;
   transform: translate(0, 20vh);
   display: flex;
   justify-content: center;
@@ -79,4 +78,20 @@ img[data-slide].hide {
 
 .back-arrow.hide {
   display: none;
+}
+
+.dots {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: -10%;
+  transform: translate(-50%, -50%);
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dots img {
+  width: 100%;
 }
