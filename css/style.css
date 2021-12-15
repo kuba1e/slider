@@ -1,0 +1,82 @@
+/*** The new CSS Reset - version 1.3.1 (last updated 28.10.2021) ***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+.img-container {
+  width: 60vw;
+  height: 60vh;
+  margin: 0 auto;
+  position: relative;
+  background-color: aquamarine;
+  transform: translate(0, 20vh);
+  display: flex;
+  justify-content: center;
+}
+
+img[data-slide] {
+  max-width: 100%;
+  transition: 1s ease-in-out;
+}
+
+img[data-slide].hide {
+  display: none;
+}
+
+.back-arrow,
+.forward-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  width: 5%;
+}
+
+.back-arrow {
+  left: -7%;
+}
+
+.forward-arrow {
+  right: -7%;
+}
+
+.forward-arrow.hide {
+  display: none;
+}
+
+.back-arrow.hide {
+  display: none;
+}
