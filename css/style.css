@@ -47,12 +47,7 @@ textarea {
   justify-content: center;
 }
 
-img[data-slide] {
-  max-width: 100%;
-  transition: 1s ease-in-out;
-}
-
-img[data-slide].hide {
+.slide-img.hide {
   display: none;
 }
 
@@ -62,6 +57,7 @@ img[data-slide].hide {
   z-index: 2;
   top: 50%;
   width: 5%;
+  cursor: pointer;
 }
 
 .back-arrow {
@@ -94,4 +90,5 @@ img[data-slide].hide {
 
 .dots img {
   width: 100%;
+  cursor: pointer;
 }
